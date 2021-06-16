@@ -1,0 +1,38 @@
+{
+  "name": "微博私信工具",
+  "version": "1.0",
+  "description": "微博私信工具",
+  "browser_action": {
+    "default_popup": "index.html",
+    "default_title": "微博私信工具",
+    "default_icon": "images/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://api.weibo.com/chat/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": ["js/inject.js"],
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "notifications",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "manifest_version": 2,
+  "options_ui":
+	{
+		"page": "index.html",
+		"chrome_style": true
+	}
+}

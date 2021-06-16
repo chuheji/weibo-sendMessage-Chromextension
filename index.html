@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .content {
+      margin-top: 15px;
+    }
+
+    .interval {
+      margin-top: 15px;
+    }
+
+    .actions {
+      display: flex;
+      margin-top: 15px;
+    }
+
+    .actions button {
+      flex: 1
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <div>
+      <button>测试登录</button>
+    </div>
+    <div class="content">
+      <div class="uid">
+        <label for="list">uid列表：</label>
+        <textarea name="list" id="list" cols="30" rows="10"></textarea>
+      </div>
+      <div class="interval">
+        <label for="interval">间隔时间：</label>
+        <input name="interval" id="interval" value="30" />
+      </div>
+    </div>
+    <div class="actions">
+      <button id="start">开始</button>
+      <button id="stop">停止</button>
+    </div>
+  </div>
+  <script src="./popup.js"></script>
+</body>
+
+</html>
